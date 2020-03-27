@@ -106,6 +106,18 @@ Now you can run your own container with its ID or tag (if you provided `-t` opti
 
 ### olric-consul-plugin
 
+[olric-consul-plugin](https://github.com/buraksezer/olric-consul-plugin) provides a seamless integration with [Consul](https://consul.io) for service discovery. 
+This repository includes a Dockerfile which builds the plugin. In order to run it:
+
+```
+docker run -e OLRICD_CONFIG=/etc/olricd/config_ext/olricd.yaml  -v PATH_TO_LOCAL_CONFIG_FOLDER:/etc/olricd/config_ext olricio/olricd:consul-plugin
+``` 
+
+Please note that you need to set a configuration file for your environment. Please take a look at the sample [olricd.yaml](https://github.com/buraksezer/olric-docker/blob/master/olric-consul-plugin/olricd-sample.yaml) 
+file to configure [olric-consul-plugin](https://github.com/buraksezer/olric-consul-plugin).
+
+Further information about configuration options for Consul backed service discovery can be found [here](https://github.com/buraksezer/olric-consul-plugin#usage). 
+
 ### olric-cloud-plugin
 
 ## Contributions
